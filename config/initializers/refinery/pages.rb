@@ -1,8 +1,8 @@
 Refinery::Pages.configure do |config|
   # Configure specific page templates
-  # config.types.register :home do |home|
-  #   home.parts = %w[intro body]
-  # end
+  config.types.register :home do |home|
+     home.parts = %w[top_section main_body]
+   end
 
   # Configure global page default parts
   config.default_parts = ["Top Section", "Body"]
