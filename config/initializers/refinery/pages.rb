@@ -5,10 +5,10 @@ Refinery::Pages.configure do |config|
   # end
 
   # Configure global page default parts
-  # config.default_parts = ["Body", "Side Body"]
+  config.default_parts = ["Top Section", "Main Body"]
 
   # Configure whether to allow adding new page parts
-  # config.new_page_parts = false
+  config.new_page_parts = true
 
   # Configure whether to enable marketable_urls
   # config.marketable_urls = true
@@ -23,7 +23,7 @@ Refinery::Pages.configure do |config|
   # config.approximate_ascii = false
 
   # Configure whether to strip non-ASCII characters from the friendly_id string
-  # config.strip_non_ascii = false
+  config.strip_non_ascii = true
 
   # Set this to true if you want to override slug which automatically gets generated
   # when you create a page
