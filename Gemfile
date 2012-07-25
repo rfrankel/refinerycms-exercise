@@ -37,7 +37,7 @@ gem 'jquery-rails'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
@@ -63,10 +63,13 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
 
 # The Heroku gem allows you to interface with Heroku's API
-gem 'heroku'
+# gem 'heroku'
 
 # Fog allows you to use S3 assets (added for Heroku)
 gem 'fog'
 
 # Postgres support (added for Heroku)
-gem 'pg'
+# gem 'pg'
+
+# Mysql support (added for Linode) 
+gem 'mysql2'
