@@ -5,6 +5,12 @@
 #require 'rvm/capistrano'
 # set :rvm_ruby_string, '1.9.3-p194'
 
+# Following directions in: 
+# https://rvm.io//integration/capistrano/
+set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
+
+require 'rvm/capistrano'
+
 # bundler bootstrap
 require 'bundler/capistrano'
 
