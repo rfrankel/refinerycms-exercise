@@ -7,6 +7,10 @@
 
 # Following directions in: 
 # https://rvm.io//integration/capistrano/
+
+# trying with system wide install directive
+set :rvm_type, :system 
+
 set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
 
 require 'rvm/capistrano'
