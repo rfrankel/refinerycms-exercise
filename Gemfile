@@ -9,6 +9,10 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :development do
+  gem 'capistrano'
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
