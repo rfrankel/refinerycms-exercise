@@ -77,3 +77,6 @@ gem 'fog'
 
 # Mysql support (added for Linode) 
 gem 'mysql2'
+
+# Rvm integration with Capistrano 
+gem 'rvm-capistrano'
