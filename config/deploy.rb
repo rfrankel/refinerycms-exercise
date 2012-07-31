@@ -1,3 +1,12 @@
+# RVM bootstrap
+$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+require 'rvm/capistrano'
+set :rvm_ruby_string, '1.9.3-p194'
+
+# bundler bootstrap
+require 'bundler/capistrano'
+
+# main capistrano config 
 set :application, "randr"
 set :repository,  "https://github.com/rfrankel/refinerycms-exercise.git"
 
