@@ -93,4 +93,8 @@ capybara-*html
 vendor/extensions/**/spec/dummy
 
 # local file to remember how the install happened
-doc/memoryofinstall.txtconfig/database.yml
+doc/memoryofinstall.txt
+
+# Ignore config/database.yml 
+# (Capistrano will pull this from the right place on the server) 
+config/database.yml
