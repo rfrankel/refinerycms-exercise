@@ -1,3 +1,6 @@
+# OK, following Mauricio Linhares advice:
+require "rvm/capistrano"
+
 # RVM bootstrap
 # apparently no longer necessary --- 
 # now add rvm-capistrano to gemfile instead 
