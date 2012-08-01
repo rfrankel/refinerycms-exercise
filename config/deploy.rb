@@ -13,8 +13,8 @@ set :rvm_install_ruby, :install
 
 # Following directions in: 
 # https://rvm.io//integration/capistrano/
-require "rvm/capistrano"
-set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
+# require "rvm/capistrano"
+# set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
 
 # bundler bootstrap
 require 'bundler/capistrano'
