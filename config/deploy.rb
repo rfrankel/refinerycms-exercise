@@ -1,9 +1,7 @@
 # RVM bootstrap
 # apparently no longer necessary --- 
 # now add rvm-capistrano to gemfile instead 
-# OK, this isn't working, so no matter what 
-# the docs say we are trying it.
-$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+# $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 #require 'rvm/capistrano'
 # set :rvm_ruby_string, '1.9.3-p194'
 
