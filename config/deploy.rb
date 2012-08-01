@@ -8,8 +8,16 @@
 # Following directions in: 
 # https://rvm.io//integration/capistrano/
 
+# OK, nothing is working. Trying having Capistrano
+# install rvm and ruby for me: 
+before 'deploy:setup', 'rvm:install_rvm'
+set :rvm_install_type, :stable
+
+before 'deploy:setup', 'rvm:install_ruby'
+set :rvm_install_ruby, :install
+
 # trying with system wide install directive
-set :rvm_type, :system 
+#set :rvm_type, :system 
 
 set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
 
