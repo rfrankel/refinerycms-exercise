@@ -1,5 +1,7 @@
 # OK, following Mauricio Linhares advice:
 require "rvm/capistrano"
+# and since it complained about the ruby string:
+set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
 
 # RVM bootstrap
 # apparently no longer necessary --- 
