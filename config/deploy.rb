@@ -3,18 +3,6 @@
 # now add rvm-capistrano to gemfile instead 
 # $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 
-# Following directions in: 
-# https://rvm.io//integration/capistrano/
-
-# trying with system wide install directive
-# and wrapping code in test as directed in 
-# http://stackoverflow.com/questions/9732434/capistrano-not-working-without-rvm
-#if ENV['rvm_path']
-#  set :rvm_type, :system 
-require "rvm/capistrano"
-set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
-#end
-
 # OK, nothing is working. Trying having Capistrano
 # install rvm and ruby for me,  
 before 'deploy:setup', 'rvm:install_rvm'
@@ -23,7 +11,10 @@ set :rvm_install_type, :stable
 before 'deploy:setup', 'rvm:install_ruby'
 set :rvm_install_ruby, :install
 
-
+# Following directions in: 
+# https://rvm.io//integration/capistrano/
+require "rvm/capistrano"
+set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
 
 # bundler bootstrap
 require 'bundler/capistrano'
