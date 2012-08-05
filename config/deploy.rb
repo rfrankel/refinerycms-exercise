@@ -3,7 +3,7 @@ require "rvm/capistrano"
 # and since it complained about the ruby string:
 # changed to follow advice in http://infinite-sushi.com/2011/01/deploying-a-rails-app-to-a-linode-box/
 # set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
-set :rvm_ruby_string, ruby-1.9.3-p125@randr
+set :rvm_ruby_string, "ruby-1.9.3-p125@randr"
 
 # RVM bootstrap
 # apparently no longer necessary --- 
