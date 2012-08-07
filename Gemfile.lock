@@ -235,7 +235,6 @@ DEPENDENCIES
   refinerycms-blog (~> 2.0.0)
   refinerycms-i18n (~> 2.0.0)
   rvm-capistrano
-  sass-rails (~> 3.2.3)
   sqlite3
   therubyracer
   uglifier (>= 1.0.3)
