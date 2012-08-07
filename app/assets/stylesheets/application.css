@@ -290,7 +290,7 @@ font-family: "futura-pt-1","futura-pt-2",sans-serif;
 	padding:18px 18px 40px 18px;
     }
 
-    .mainnav #primary li a:hover { text-decoration:underline; color:#fff }
+    .mainnav #primary li a:hover { text-decoration:underline; color:#fff; }
     .mainnav #primary li.home { 
 	background:rgba(13,177,75,0.2);
     }
@@ -299,6 +299,21 @@ font-family: "futura-pt-1","futura-pt-2",sans-serif;
 	border-color:#6e637e; 
 	color: darkgreen;                 /* was #533f6e */
     }
+
+    .mainnav #primary li.home a:hover { text-decoration:none; }
+    .mainnav #primary span { padding-left:0; }
+    
+    /* Icons */
+    
+    .mainnav #secondary li.blog { 
+	background:url('images/iconwordpress_sm_green.png') no-repeat scroll 15px -3px rgba(0,113,188,0.2); }
+    .mainnav #secondary li.fb { 
+	background:url('images/iconfacebook_sm_green.png') no-repeat scroll 15px -3px rgba(0,113,188,0.2); }
+    .mainnav #secondary li.twitter { 
+	background:url('images/icontwitter_sm_green.png') no-repeat scroll 15px -3px rgba(0,113,188,0.2); }
+    .mainnav #secondary li.twitterbird { 
+	background:url('images/icontwitter_bird_sm_green.png') no-repeat scroll 15px -3px rgba(0,113,188,0.2); }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -329,17 +344,6 @@ font-family: "futura-pt-1","futura-pt-2",sans-serif;
      }
 }
 
-    .mainnav #primary li.home a:hover { text-decoration:none }
-    .mainnav #primary span { padding-left:0 }
-    
-    /* Icons */
-    
-    .mainnav #secondary li.blog { background:url('images/iconwordpress_sm_green.png') no-repeat scroll 15px -3px; }
-    .mainnav #secondary li.fb { background:url('images/iconfacebook_sm_green.png') no-repeat scroll 15px -3px; }
-    .mainnav #secondary li.twitter { background:url('images/icontwitter_sm_green.png') no-repeat scroll 15px -3px; }
-    .mainnav #secondary li.twitterbird { background:url('images/icontwitter_bird_sm_green.png') no-repeat scroll 15px -3px; }
-
-}
 
 /* -----------------------------------------
    Orbit
