@@ -1,7 +1,9 @@
 # OK, following Mauricio Linhares advice:
 require "rvm/capistrano"
 # and since it complained about the ruby string:
-set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
+# changed to follow advice in http://infinite-sushi.com/2011/01/deploying-a-rails-app-to-a-linode-box/
+# set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
+set :rvm_ruby_string, "ruby-1.9.3-p125@randr"
 
 # RVM bootstrap
 # apparently no longer necessary --- 
@@ -39,6 +41,13 @@ role :web, "rebeccafrankel.com"                         # Your HTTP server, Apac
 role :app, "rebeccafrankel.com"                          # This may be the same as your `Web` server
 role :db,  "rebeccafrankel.com", :primary => true # This is where Rails migrations will run
 
+# following advice in https://help.github.com/articles/deploying-with-capistrano
+# Remote caching will keep a local git repo on the server you're deploying to
+# and simply run a fetch from that rather than an entire clone. 
+# This is probably the best option as it will only fetch 
+# the changes since the last deploy.
+set :deploy_via, :remote_cache
+
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
 
@@ -65,3 +74,10 @@ namespace :db do
 end
 
 after "deploy:finalize_update", "db:db_config"
+
+# also from that essay: 
+
+task :precompile, :role => :app do
+    run "cd #{release_path}/ && rake assets:precompile"
+  end
+after "deploy:finalize_update", "deploy:precompile"
