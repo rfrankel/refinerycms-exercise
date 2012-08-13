@@ -98,3 +98,6 @@ doc/memoryofinstall.txt
 # Ignore config/database.yml 
 # (Capistrano will pull this from the right place on the server) 
 config/database.yml
+
+# Compiled assets 
+public/assets
