@@ -75,9 +75,3 @@ end
 
 after "deploy:finalize_update", "db:db_config"
 
-# also from that essay: 
-
-task :precompile, :role => :app do
-    run "cd #{release_path}/ && rake assets:precompile"
-  end
-after "deploy:finalize_update", "deploy:precompile"
