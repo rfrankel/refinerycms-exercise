@@ -70,7 +70,11 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 # gem 'heroku'
 
 # Fog allows you to use S3 assets (added for Heroku)
-gem 'fog'
+# removed after I gave up on Heroku
+# group :production do
+#   gem 'fog'
+# end
+
 
 # Postgres support (added for Heroku)
 # gem 'pg'
