@@ -1,3 +1,4 @@
+# -*- coding: undecided -*-
 require File.expand_path('../boot', __FILE__)
 
 # Pick the frameworks you want:
@@ -61,5 +62,14 @@ module Ryanandrobbie
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # following directions from Refinery guide at: 
+    # http://refinerycms.com/guides/heroku
+    config.assets.initialize_on_precompile = true   
+    # This is necessary to make post-deploy asset precompilation happen. 
+    # Without this, Refinery will fail to compile its assets, 
+    # owing to its use of Rails’ URL helpers inside of its Javascript files 
+    # (necessary for its WYSIWYG editor).
+
   end
 end
